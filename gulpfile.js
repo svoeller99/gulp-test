@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
 gulp.task('default', function(){
-  console.log('hi');
+  gulp.src('src/stuff/**/*.txt', {base:'src'})
+    .pipe(gulp.dest('dest'));
 });
