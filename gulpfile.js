@@ -27,3 +27,9 @@ gulp.task('err', ['one'],function(cb){
 });
 
 gulp.task('foo',['one','two']);
+
+gulp.task('watchme', function(){
+  gulp.watch('src/**/*.*').on('change', function(event){
+    console.log("Hey! You just changed " + event.path + "! Event type was " + event.type);
+  });
+});
