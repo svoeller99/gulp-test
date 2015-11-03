@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var del = require('del');
 
 gulp.task('default', ['monkey','asdf'], function(){
   gulp.src('src/stuff/**/*.txt', {base:'src'})
@@ -32,4 +33,8 @@ gulp.task('watchme', function(){
   gulp.watch('src/**/*.*').on('change', function(event){
     console.log("Hey! You just changed " + event.path + "! Event type was " + event.type);
   });
+});
+
+gulp.task('clean', function(){
+  del('dest');
 });

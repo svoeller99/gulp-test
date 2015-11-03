@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/svoeller99/gulp-test#readme",
   "devDependencies": {
+    "del": "^2.0.2",
     "gulp": "^3.9.0"
   }
 }
